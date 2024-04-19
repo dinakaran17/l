@@ -8,7 +8,7 @@ router.get('/',(req,res)=>
 })
 router.get('/camp',async(req,res)=>
 {
-    const camp=User.find({})
+    const camp=await User.find({})
     res.render('home',{camp})
 })
 router.get('/new',(req,res)=>
